@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace FizzBuzzKata
 {
     public class FizzBuzz
-    {
+    { 
     }
 }
