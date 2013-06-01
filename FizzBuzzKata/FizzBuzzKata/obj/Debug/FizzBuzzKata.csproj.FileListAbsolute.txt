@@ -5,3 +5,10 @@ C:\Users\Eric\Documents\GitHub\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\
 C:\Users\Eric\Documents\GitHub\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\obj\Debug\FizzBuzzKata.csprojResolveAssemblyReference.cache
 C:\Users\Eric\Documents\GitHub\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\obj\Debug\FizzBuzzKata.dll
 C:\Users\Eric\Documents\GitHub\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\obj\Debug\FizzBuzzKata.pdb
+C:\wamp\www\Homework\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\FizzBuzzKata.dll
+C:\wamp\www\Homework\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\FizzBuzzKata.pdb
+C:\wamp\www\Homework\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\nunit.framework.dll
+C:\wamp\www\Homework\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\nunit.framework.xml
+C:\wamp\www\Homework\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\obj\Debug\FizzBuzzKata.csprojResolveAssemblyReference.cache
+C:\wamp\www\Homework\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\obj\Debug\FizzBuzzKata.dll
+C:\wamp\www\Homework\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\obj\Debug\FizzBuzzKata.pdb
