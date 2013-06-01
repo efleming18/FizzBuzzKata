@@ -7,24 +7,30 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTests
     [TestFixture]
     class IsDivisibleByThreeShould
     {
+        private FizzBuzz _fizzBuzz;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _fizzBuzz = new FizzBuzz();
+        }
+
         [Test]
         public void ReturnTrueIfNumberIsDivisibleByThree()
         {
-            var fizzBuzz = new FizzBuzz();
-            var actualValue = fizzBuzz.IsDivisibleByThree(6);
-
             var expectedValue = true;
 
-            Assert.AreEqual(actualValue, expectedValue);
+            var actualValue = _fizzBuzz.IsDivisibleByThree(6);
+
+            Assert.AreEqual(expectedValue, actualValue);
         }
 
         [Test]
         public void ReturnFalseIfNumberIsNotDivisibleByThree()
         {
-            var fizzBuzz = new FizzBuzz();
             var expectedValue = false;
 
-            var actualValue = fizzBuzz.IsDivisibleByThree(2);
+            var actualValue = _fizzBuzz.IsDivisibleByThree(2);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
