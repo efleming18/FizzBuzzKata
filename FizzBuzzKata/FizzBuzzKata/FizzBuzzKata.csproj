@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\FizzBuzzTests\IsDivisibleByFiveShould.cs" />
     <Compile Include="UnitTests\FizzBuzzTests\IsDivisibleByThreeShould.cs" />
   </ItemGroup>
   <ItemGroup>
