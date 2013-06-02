@@ -24,5 +24,15 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTests
 
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [Test]
+        public void ReturnFalseWhenInputIsNotDivisibleByFive()
+        {
+            var expectedValue = false;
+
+            var actualValue = _fizzBuzz.IsDivisibleByFive(7);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
