@@ -10,7 +10,6 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTests
         [Test]
         public void ReturnTrueWhenInputIsDivisibleByFive()
         {
-            // Yes! The app would be nice!
             var fizzBuzz = new FizzBuzz();
             var expectedValue = true;
 

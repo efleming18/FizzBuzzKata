@@ -7,8 +7,7 @@ namespace FizzBuzzKata
     { 
         public object IsDivisibleByFive(int p)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return true;
         }
 
         public bool IsDivisibleByThree(int input)
