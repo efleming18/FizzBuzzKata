@@ -7,13 +7,20 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTests
     [TestFixture]
     class IsDivisibleByFiveShould
     {
+        private FizzBuzz _fizzBuzz;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _fizzBuzz = new FizzBuzz();
+        }
+
         [Test]
         public void ReturnTrueWhenInputIsDivisibleByFive()
         {
-            var fizzBuzz = new FizzBuzz();
             var expectedValue = true;
 
-            var actualValue = fizzBuzz.IsDivisibleByFive(5);
+            var actualValue = _fizzBuzz.IsDivisibleByFive(5);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
