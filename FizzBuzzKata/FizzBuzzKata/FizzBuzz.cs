@@ -5,7 +5,7 @@ namespace FizzBuzzKata
 {
     public class FizzBuzz
     { 
-        public bool IsDivisibleByThreeAndFiveShould(int input)
+        public bool IsDivisibleByThreeAndFive(int input)
         {
             return true;
         }
