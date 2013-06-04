@@ -36,7 +36,7 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTests
         }
 
         [Test]
-        public void ReturnFalseWhenImputIsNotDivisibleByFive()
+        public void ReturnFalseWhenInputIsNotDivisibleByFive()
         {
             var expectedValue = false;
 
