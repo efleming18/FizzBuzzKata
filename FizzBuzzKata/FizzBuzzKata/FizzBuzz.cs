@@ -7,8 +7,7 @@ namespace FizzBuzzKata
     { 
         public string BuildFizzBuzzString()
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }
