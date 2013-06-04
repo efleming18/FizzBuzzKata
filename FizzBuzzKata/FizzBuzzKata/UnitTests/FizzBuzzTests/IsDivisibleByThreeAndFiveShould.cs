@@ -19,17 +19,19 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTests
         public void ReturnTrueWhenInputIsDivisibleByThreeAndFive()
         {
             var expectedValue = true;
+
             var actualValue = _fizzBuzz.IsDivisibleByThreeAndFive(15);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
 
         [Test]
-        public void ReturnFalseWhenInputIsNotDivisibleByThreeAndFive()
+        public void ReturnFalseWhenInputIsNotDivisibleByThree()
         {
             var expectedValue = false;
-            var actualValue = _fizzBuzz.IsDivisibleByThreeAndFive(18);
-            //possibly use a [TestCase] here? So to pick a number divisible by 3, by 5, then by neither?
+
+            var actualValue = _fizzBuzz.IsDivisibleByThreeAndFive(5);
+
             Assert.AreEqual(expectedValue, actualValue);
         }
     }
