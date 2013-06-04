@@ -8,12 +8,12 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
     public class BuildFizzBuzzStringShould
     {
         [Test]
-        public void ReturnFizzIfDivisibleByThree()
+        public void ReturnFizzIfInputIsDivisibleByThree()
         {
             var fizzBuzz = new FizzBuzz();
 
             string expectedValue = "Fizz";
-            string actualValue = fizzBuzz.BuildFizzBuzzString();
+            string actualValue = fizzBuzz.BuildFizzBuzzString(3);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
