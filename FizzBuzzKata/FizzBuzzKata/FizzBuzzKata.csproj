@@ -45,9 +45,10 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTests\FizzBuzzTests\IsDivisibleByFiveShould.cs" />
-    <Compile Include="UnitTests\FizzBuzzTests\IsDivisibleByThreeAndFiveShould.cs" />
-    <Compile Include="UnitTests\FizzBuzzTests\IsDivisibleByThreeShould.cs" />
+    <Compile Include="UnitTests\CalculatorTests\IsDivisibleByFiveShould.cs" />
+    <Compile Include="UnitTests\CalculatorTests\IsDivisibleByThreeAndFiveShould.cs" />
+    <Compile Include="UnitTests\CalculatorTests\IsDivisibleByThreeShould.cs" />
+    <Compile Include="UnitTests\FizzBuzzTest\BuildFizzBuzzStringShould.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
