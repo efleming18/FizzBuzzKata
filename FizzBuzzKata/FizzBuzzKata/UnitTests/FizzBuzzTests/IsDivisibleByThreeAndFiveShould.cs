@@ -34,5 +34,15 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTests
 
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [Test]
+        public void ReturnFalseWhenImputIsNotDivisibleByFive()
+        {
+            var expectedValue = false;
+
+            var actualValue = _calculator.IsDivisibleByThreeAndFive(3);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
