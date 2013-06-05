@@ -15,7 +15,7 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         }
 
         [Test]
-        public void ReturnFizzIfInputIsDivisibleByThree()
+        public void ReturnFizzIfInputIsDivisibleByThreeButNotFive()
         {
             string expectedValue = "Fizz";
 
@@ -25,12 +25,12 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         }
 
         [Test]
-        public void ReturnBuzzIfInputIsDivisibleByFive()
+        public void ReturnBuzzIfInputIsDivisibleByFiveButNotThree()
         {
             string expectedValue = "Buzz";
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(5);
-            //I'm not sure what you meant by your last comment? Maybe this test will clear that up?
+            
             Assert.AreEqual(expectedValue, actualValue);
         }
 
