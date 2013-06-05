@@ -13,6 +13,10 @@ namespace FizzBuzzKata
             {
                 return "FizzBuzz";
             }
+            if (_calculator.IsDivisibleByFive(input))
+            {
+                return "Buzz";
+            }
             return "Fizz";
         }
     }
