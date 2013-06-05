@@ -43,5 +43,16 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
 
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [Test]
+        public void ReturnTheInputIfNotDivisibleByThreeOrFive()
+        {
+            int input = 2;
+            string expectedValue = input.ToString();
+
+            string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
