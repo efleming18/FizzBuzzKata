@@ -17,7 +17,11 @@ namespace FizzBuzzKata
             {
                 return "Buzz";
             }
-            return "Fizz";
+            if (_calculator.IsDivisibleByThree(input))
+            {
+                return "Fizz";
+            }
+            return input.ToString();
         }
     }
 }
