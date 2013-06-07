@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Moq;
 using NUnit.Framework;
 
 namespace FizzBuzzKata.UnitTests.FizzBuzzTest
@@ -49,6 +50,23 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         {
             int input = 2;
             string expectedValue = input.ToString();
+
+            string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [Test]
+        public void ReturnFizzBuzzIfInputContainsThreeAndFive()
+        {
+            int input = 53;
+            string expectedValue = "FizzBuzz";
+
+            // I just realized we have been writing integration tests on the string builder :(
+            // Lets try to finish the string builder (or whatever we refactor it into so we don't
+            // have to mock 15 methods for each test) without writing the body of any stringInspector methods.
+            var mockStringInspector = new Mock<IStringInspector>();
+            mockStringInspector.Setup(msi => msi.ContainsThreeAndFive(It.IsAny<int>())).Returns(true);
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
 
