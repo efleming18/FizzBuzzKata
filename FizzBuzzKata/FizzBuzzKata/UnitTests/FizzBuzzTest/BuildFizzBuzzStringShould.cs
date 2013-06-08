@@ -9,10 +9,15 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
     public class BuildFizzBuzzStringShould
     {
         private FizzBuzz _fizzBuzz;
+        private Mock<IStringInspector> _mockStringInspector;
+        private Calculator _calculator;
+
         [SetUp]
         public void SetUp()
         {
-            _fizzBuzz = new FizzBuzz();
+            _mockStringInspector = new Mock<IStringInspector>();
+            _calculator = new Calculator();
+            _fizzBuzz = new FizzBuzz(_calculator, _mockStringInspector.Object);
         }
 
         [Test]
@@ -61,12 +66,7 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         {
             int input = 53;
             string expectedValue = "FizzBuzz";
-
-            // I just realized we have been writing integration tests on the string builder :(
-            // Lets try to finish the string builder (or whatever we refactor it into so we don't
-            // have to mock 15 methods for each test) without writing the body of any stringInspector methods.
-            var mockStringInspector = new Mock<IStringInspector>();
-            mockStringInspector.Setup(msi => msi.ContainsThreeAndFive(It.IsAny<int>())).Returns(true);
+            _mockStringInspector.Setup(msi => msi.ContainsThreeAndFive(It.IsAny<int>())).Returns(true);
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
 

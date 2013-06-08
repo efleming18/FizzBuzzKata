@@ -4,11 +4,22 @@ using System.Linq;
 namespace FizzBuzzKata
 {
     public class FizzBuzz
-    { 
-        readonly Calculator _calculator = new Calculator();
+    {
+        readonly Calculator _calculator;
+        readonly IStringInspector _stringInspector;
+
+        public FizzBuzz(Calculator calculator, IStringInspector stringInspector)
+        {
+            _calculator = calculator;
+            _stringInspector = stringInspector;
+        }
 
         public string BuildFizzBuzzString(int input)
         {
+            if (_stringInspector.ContainsThreeAndFive(input))
+            {
+                return "FizzBuzz";
+            }
             if (_calculator.IsDivisibleByThreeAndFive(input))
             {
                 return "FizzBuzz";
