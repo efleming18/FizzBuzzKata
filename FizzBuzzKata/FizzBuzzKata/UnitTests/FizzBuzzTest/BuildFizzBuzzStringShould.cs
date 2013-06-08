@@ -70,11 +70,24 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         {
             int input = 53;
             string expectedValue = "FizzBuzz";
-            _mockWordGetter.Setup(mwo => mwo.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
+            _mockWordGetter.Setup(mwg => mwg.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
             _mockStringInspector.Setup(msi => msi.ContainsThreeAndFive(It.IsAny<int>())).Returns(true);
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
 
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [Test]
+        public void ReturnStringContainingBuzzIfInputContainsFive()
+        {
+            int input = 511;
+            string expectedValue = "Buzz";
+            _mockWordGetter.Setup(mwg => mwg.GetFizzIfRequired(It.IsAny<int>())).Returns(String.Empty);
+            _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns("Buzz");
+
+            string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
+            
             Assert.AreEqual(expectedValue, actualValue);
         }
     }
