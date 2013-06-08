@@ -10,20 +10,23 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
     {
         private FizzBuzz _fizzBuzz;
         private Mock<IStringInspector> _mockStringInspector;
+        private Mock<IWordGetter> _mockWordGetter;
         private Calculator _calculator;
 
         [SetUp]
         public void SetUp()
         {
             _mockStringInspector = new Mock<IStringInspector>();
+            _mockWordGetter = new Mock<IWordGetter>();
             _calculator = new Calculator();
-            _fizzBuzz = new FizzBuzz(_calculator, _mockStringInspector.Object);
+            _fizzBuzz = new FizzBuzz(_calculator, _mockStringInspector.Object, _mockWordGetter.Object);
         }
 
         [Test]
         public void ReturnFizzIfInputIsDivisibleByThreeButNotFive()
         {
             string expectedValue = "Fizz";
+            _mockWordGetter.Setup(mwo => mwo.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(3);
 
@@ -44,6 +47,7 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         public void ReturnFizzBuzzIfInputIsDivisibleByThreeAndFive()
         {
             string expectedValue = "FizzBuzz";
+            _mockWordGetter.Setup(mwo => mwo.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(15);
 
@@ -66,6 +70,7 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         {
             int input = 53;
             string expectedValue = "FizzBuzz";
+            _mockWordGetter.Setup(mwo => mwo.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
             _mockStringInspector.Setup(msi => msi.ContainsThreeAndFive(It.IsAny<int>())).Returns(true);
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);

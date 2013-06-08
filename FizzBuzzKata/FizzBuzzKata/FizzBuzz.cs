@@ -5,34 +5,35 @@ namespace FizzBuzzKata
 {
     public class FizzBuzz
     {
-        readonly Calculator _calculator;
-        readonly IStringInspector _stringInspector;
+        private readonly Calculator _calculator;
+        private readonly IWordGetter _wordGetter;
+        private readonly IStringInspector _stringInspector;
 
-        public FizzBuzz(Calculator calculator, IStringInspector stringInspector)
+        public FizzBuzz(Calculator calculator, IStringInspector stringInspector, IWordGetter wordGetter)
         {
-            _calculator = calculator;
             _stringInspector = stringInspector;
+            _calculator = calculator;
+            _wordGetter = wordGetter;
         }
 
         public string BuildFizzBuzzString(int input)
         {
+            var wordsToReturn = String.Empty;
+            wordsToReturn = _wordGetter.GetFizzIfRequired(input);
+
             if (_stringInspector.ContainsThreeAndFive(input))
             {
-                return "FizzBuzz";
+                return wordsToReturn + "Buzz";
             }
             if (_calculator.IsDivisibleByThreeAndFive(input))
             {
-                return "FizzBuzz";
-            }
-            if (_calculator.IsDivisibleByThree(input))
-            {
-                return "Fizz";
+                return wordsToReturn + "Buzz";
             }
             if (_calculator.IsDivisibleByFive(input))
             {
                 return "Buzz";
             }
-            return input.ToString();
+            return String.IsNullOrEmpty(wordsToReturn) ? input.ToString() : wordsToReturn;
         }
     }
 }
