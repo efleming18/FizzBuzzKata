@@ -1,6 +1,6 @@
 namespace FizzBuzzKata
 {
-    public class Calculator
+    public class Calculator : ICalculator
     {
         public bool IsDivisibleByThreeAndFive(int input)
         {
