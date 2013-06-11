@@ -22,3 +22,6 @@ D:\Dev\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\obj\Debug\FizzBuzzKata.pdb
 D:\Dev\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\Moq.dll
 D:\Dev\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\Moq.pdb
 D:\Dev\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\Moq.xml
+C:\Users\Eric\Documents\GitHub\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\Moq.dll
+C:\Users\Eric\Documents\GitHub\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\Moq.pdb
+C:\Users\Eric\Documents\GitHub\FizzBuzzKata\FizzBuzzKata\FizzBuzzKata\bin\Debug\Moq.xml

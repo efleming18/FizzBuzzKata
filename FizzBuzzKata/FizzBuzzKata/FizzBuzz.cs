@@ -25,6 +25,10 @@ namespace FizzBuzzKata
             {
                 return wordsToReturn + "Buzz";
             }
+            if (_stringInspector.ContainsFive(input))
+            {
+                return "Buzz";
+            }
             if (_calculator.IsDivisibleByThreeAndFive(input))
             {
                 return wordsToReturn + "Buzz";

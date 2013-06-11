@@ -83,8 +83,8 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         {
             int input = 511;
             string expectedValue = "Buzz";
-            _mockWordGetter.Setup(mwg => mwg.GetFizzIfRequired(It.IsAny<int>())).Returns(String.Empty);
             _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns("Buzz");
+            _mockStringInspector.Setup(msi => msi.ContainsFive(It.IsAny<int>())).Returns(true);
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
             

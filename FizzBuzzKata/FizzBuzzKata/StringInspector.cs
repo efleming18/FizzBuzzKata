@@ -6,7 +6,19 @@ namespace FizzBuzzKata
     {
         public bool ContainsThreeAndFive(int input)
         {
-            throw new NotImplementedException();
+            if (input.ToString() == "3" && input.ToString() == "5")
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool ContainsFive(int input)
+        {
+            if (input.ToString() == "5")
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
