@@ -90,5 +90,18 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
             
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [Test]
+        public void ReturnFizzIfInputContainsThree()
+        {
+            int input = 311;
+            string expectedValue = "Fizz";
+            _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns("Buzz");
+            _mockStringInspector.Setup(msi => msi.ContainsFive(It.IsAny<int>())).Returns(true);
+
+            string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
