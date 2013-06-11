@@ -9,69 +9,36 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
     public class BuildFizzBuzzStringShould
     {
         private FizzBuzz _fizzBuzz;
-        private Mock<IStringInspector> _mockStringInspector;
         private Mock<IWordGetter> _mockWordGetter;
-        private Calculator _calculator;
 
         [SetUp]
         public void SetUp()
         {
-            _mockStringInspector = new Mock<IStringInspector>();
             _mockWordGetter = new Mock<IWordGetter>();
-            _calculator = new Calculator();
-            _fizzBuzz = new FizzBuzz(_calculator, _mockStringInspector.Object, _mockWordGetter.Object);
+            _fizzBuzz = new FizzBuzz(_mockWordGetter.Object);
         }
 
         [Test]
-        public void ReturnFizzIfInputIsDivisibleByThreeButNotFive()
-        {
-            string expectedValue = "Fizz";
-            _mockWordGetter.Setup(mwo => mwo.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
-
-            string actualValue = _fizzBuzz.BuildFizzBuzzString(3);
-
-            Assert.AreEqual(expectedValue, actualValue);
-        }
-
-        [Test]
-        public void ReturnBuzzIfInputIsDivisibleByFiveButNotThree()
-        {
-            string expectedValue = "Buzz";
-
-            string actualValue = _fizzBuzz.BuildFizzBuzzString(5);
-            
-            Assert.AreEqual(expectedValue, actualValue);
-        }
-
-        [Test]
-        public void ReturnFizzBuzzIfInputIsDivisibleByThreeAndFive()
-        {
-            string expectedValue = "FizzBuzz";
-            _mockWordGetter.Setup(mwo => mwo.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
-
-            string actualValue = _fizzBuzz.BuildFizzBuzzString(15);
-
-            Assert.AreEqual(expectedValue, actualValue);
-        }
-
-        [Test]
-        public void ReturnTheInputIfNotDivisibleByThreeOrFive()
+        public void ReturnInputIfNeitherFizzNorBuzzIsRequired()
         {
             int input = 2;
             string expectedValue = input.ToString();
 
+            _mockWordGetter.Setup(mwg => mwg.GetFizzIfRequired(It.IsAny<int>())).Returns(String.Empty);
+            _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns(String.Empty);
+
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
 
         [Test]
-        public void ReturnFizzBuzzIfInputContainsThreeAndFive()
+        public void ReturnFizzAndBuzzIfRequired()
         {
             int input = 53;
             string expectedValue = "FizzBuzz";
             _mockWordGetter.Setup(mwg => mwg.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
-            _mockStringInspector.Setup(msi => msi.ContainsThreeAndFive(It.IsAny<int>())).Returns(true);
+            _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns("Buzz");
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
 
@@ -79,12 +46,12 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         }
 
         [Test]
-        public void ReturnBuzzIfInputContainsFive()
+        public void ReturnBuzzIfRequired()
         {
             int input = 511;
             string expectedValue = "Buzz";
+            _mockWordGetter.Setup(mwg => mwg.GetFizzIfRequired(It.IsAny<int>())).Returns(String.Empty);
             _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns("Buzz");
-            _mockStringInspector.Setup(msi => msi.ContainsFive(It.IsAny<int>())).Returns(true);
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
             
@@ -92,12 +59,12 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         }
 
         [Test]
-        public void ReturnFizzIfInputContainsThree()
+        public void ReturnFizzIfRequired()
         {
             int input = 311;
             string expectedValue = "Fizz";
             _mockWordGetter.Setup(mwg => mwg.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
-            //_mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns(String.Empty);
+            _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns(String.Empty);
 
             string actualValue = _fizzBuzz.BuildFizzBuzzString(input);
 
