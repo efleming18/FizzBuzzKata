@@ -94,6 +94,7 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         [Test]
         public void ReturnFizzIfInputContainsThree()
         {
+            //I'm not sure if I did some of the things the way you had in mind but I'm pretty sure its close! Let me know what ya think.
             int input = 311;
             string expectedValue = "Fizz";
             _mockWordGetter.Setup(mwg => mwg.GetBuzzIfRequired(It.IsAny<int>())).Returns("Buzz");
