@@ -79,7 +79,7 @@ namespace FizzBuzzKata.UnitTests.FizzBuzzTest
         }
 
         [Test]
-        public void ReturnStringContainingBuzzIfInputContainsFive()
+        public void ReturnBuzzIfInputContainsFive()
         {
             int input = 511;
             string expectedValue = "Buzz";

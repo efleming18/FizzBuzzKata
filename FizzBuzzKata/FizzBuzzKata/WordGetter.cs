@@ -6,7 +6,12 @@ namespace FizzBuzzKata
     {
         public string GetBuzzIfRequired(int input)
         {
-            throw new NotImplementedException();
+            var stringInspector = new StringInspector();
+            if (stringInspector.ContainsFive(input))
+            {
+                return "Buzz";
+            }
+            return "";
         }
 
         public string GetFizzIfRequired(int input)
