@@ -15,7 +15,7 @@ namespace FizzBuzzKata
 
         public string GetBuzzIfRequired(int input)
         {
-            if (_stringInspector.ContainsFive(input))
+            if (_stringInspector.ContainsFive(input) || _calculator.IsDivisibleByFive(input))
             {
                 return "Buzz";
             }
