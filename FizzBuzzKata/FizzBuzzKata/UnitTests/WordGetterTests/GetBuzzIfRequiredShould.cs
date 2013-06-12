@@ -23,7 +23,7 @@ namespace FizzBuzzKata.UnitTests.WordGetterTests
         [Test]
         public void ReturnBuzzIfInputContainsFive()
         {
-            var input = 53;
+            var input = 54;
             var expectedValue = "Buzz";
             _mockStringInspector.Setup(msi => msi.ContainsFive(It.IsAny<int>())).Returns(true);
             _mockCalculator.Setup(mc => mc.IsDivisibleByFive(It.IsAny<int>())).Returns(false);
