@@ -51,7 +51,6 @@
     <Compile Include="IWordGetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\CalculatorTests\IsDivisibleByFiveShould.cs" />
-    <Compile Include="UnitTests\CalculatorTests\IsDivisibleByThreeAndFiveShould.cs" />
     <Compile Include="UnitTests\CalculatorTests\IsDivisibleByThreeShould.cs" />
     <Compile Include="UnitTests\FizzBuzzTest\BuildFizzBuzzStringShould.cs" />
     <Compile Include="IStringInspector.cs" />

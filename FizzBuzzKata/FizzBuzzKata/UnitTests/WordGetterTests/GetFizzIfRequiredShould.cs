@@ -32,6 +32,5 @@ namespace FizzBuzzKata.UnitTests.WordGetterTests
 
             Assert.AreEqual(expectedValue, actualValue);
         }
-
     }
 }
