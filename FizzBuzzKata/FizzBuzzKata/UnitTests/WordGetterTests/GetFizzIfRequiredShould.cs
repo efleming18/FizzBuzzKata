@@ -32,5 +32,31 @@ namespace FizzBuzzKata.UnitTests.WordGetterTests
 
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [Test]
+        public void ReturnFizzIfInputIsDivisibleByThree()
+        {
+            var input = 30;
+            var expectedValue = "Fizz";
+            _mockStringInspector.Setup(msi => msi.ContainsThree(It.IsAny<int>())).Returns(false);
+            _mockCalculator.Setup(mc => mc.IsDivisibleByThree(It.IsAny<int>())).Returns(true);
+
+            var actualValue = _wordGetter.GetFizzIfRequired(input);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [Test]
+        public void ReturnEmptyStringWhenInputDoesNotContainThreeNorIsDivisibleByThree()
+        {
+            var input = 11;
+            var expectedValue = String.Empty;
+            _mockStringInspector.Setup(msi => msi.ContainsThree(It.IsAny<int>())).Returns(false);
+            _mockCalculator.Setup(mc => mc.IsDivisibleByThree(It.IsAny<int>())).Returns(false);
+
+            var actualValue = _wordGetter.GetFizzIfRequired(input);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
