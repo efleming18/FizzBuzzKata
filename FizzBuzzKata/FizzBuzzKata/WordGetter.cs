@@ -24,7 +24,11 @@ namespace FizzBuzzKata
 
         public string GetFizzIfRequired(int input)
         {
-            return "Fizz";
+            if (_stringInspector.ContainsThree(input) || _calculator.IsDivisibleByThree(input))
+            {
+                return "Fizz";
+            }
+            return string.Empty;
         }
     }
 }
