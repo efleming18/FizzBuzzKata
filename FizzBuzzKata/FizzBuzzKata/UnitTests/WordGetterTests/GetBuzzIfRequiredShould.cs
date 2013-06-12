@@ -45,5 +45,18 @@ namespace FizzBuzzKata.UnitTests.WordGetterTests
 
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [Test]
+        public void ReturnEmptyStringIfInputDoesNotContain5NorIsDivisibleByFive()
+        {
+            var input = 13;
+            var expectedValue = String.Empty;
+            _mockStringInspector.Setup(msi => msi.ContainsFive(It.IsAny<int>())).Returns(false);
+            _mockCalculator.Setup(mc => mc.IsDivisibleByFive(It.IsAny<int>())).Returns(false);
+
+            var actualValue = _wordGetter.GetBuzzIfRequired(input);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }

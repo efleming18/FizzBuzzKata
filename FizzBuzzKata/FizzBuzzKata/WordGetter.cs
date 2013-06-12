@@ -24,7 +24,7 @@ namespace FizzBuzzKata
 
         public string GetFizzIfRequired(int input)
         {
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }
