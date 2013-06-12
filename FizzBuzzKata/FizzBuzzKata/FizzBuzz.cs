@@ -7,6 +7,8 @@ namespace FizzBuzzKata
     {
         private readonly IWordGetter _wordGetter;
 
+        public FizzBuzz() : this(new WordGetter()) { }
+
         public FizzBuzz(IWordGetter wordGetter)
         {
             _wordGetter = wordGetter;

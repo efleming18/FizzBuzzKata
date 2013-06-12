@@ -48,6 +48,7 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="IntegrationTests\FizzBuzzShould.cs" />
     <Compile Include="IWordGetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\CalculatorTests\IsDivisibleByFiveShould.cs" />

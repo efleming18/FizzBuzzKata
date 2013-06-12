@@ -7,6 +7,8 @@ namespace FizzBuzzKata
         private readonly IStringInspector _stringInspector;
         private readonly ICalculator _calculator;
 
+        public WordGetter() : this(new StringInspector(), new Calculator()) { }
+
         public WordGetter(IStringInspector stringInspector, ICalculator calculator)
         { 
             _calculator = calculator;
