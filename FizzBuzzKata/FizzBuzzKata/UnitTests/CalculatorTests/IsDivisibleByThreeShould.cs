@@ -2,7 +2,7 @@
 using System.Linq;
 using NUnit.Framework;
 
-namespace FizzBuzzKata.UnitTests.FizzBuzzTests
+namespace FizzBuzzKata.UnitTests.CalculatorTests
 {
     [TestFixture]
     class IsDivisibleByThreeShould
