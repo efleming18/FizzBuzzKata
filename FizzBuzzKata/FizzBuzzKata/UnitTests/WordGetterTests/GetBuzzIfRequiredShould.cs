@@ -47,10 +47,10 @@ namespace FizzBuzzKata.UnitTests.WordGetterTests
         }
 
         [Test]
-        public void ReturnEmptyStringIfInputDoesNotContain5NorIsDivisibleByFive()
+        public void ReturnEmptyStringIfInputDoesNotContainFiveNorIsDivisibleByFive()
         {
             var input = 13;
-            var expectedValue = String.Empty;
+            var expectedValue = string.Empty;
             _mockStringInspector.Setup(msi => msi.ContainsFive(It.IsAny<int>())).Returns(false);
             _mockCalculator.Setup(mc => mc.IsDivisibleByFive(It.IsAny<int>())).Returns(false);
 

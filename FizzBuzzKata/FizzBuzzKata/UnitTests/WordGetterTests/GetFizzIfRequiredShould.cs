@@ -50,7 +50,7 @@ namespace FizzBuzzKata.UnitTests.WordGetterTests
         public void ReturnEmptyStringWhenInputDoesNotContainThreeNorIsDivisibleByThree()
         {
             var input = 11;
-            var expectedValue = String.Empty;
+            var expectedValue = string.Empty;
             _mockStringInspector.Setup(msi => msi.ContainsThree(It.IsAny<int>())).Returns(false);
             _mockCalculator.Setup(mc => mc.IsDivisibleByThree(It.IsAny<int>())).Returns(false);
 
