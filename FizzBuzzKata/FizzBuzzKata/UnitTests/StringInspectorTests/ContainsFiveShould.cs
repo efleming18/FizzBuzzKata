@@ -17,5 +17,16 @@ namespace FizzBuzzKata.UnitTests.StringInspectorTests
 
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [Test]
+        public void ReturnFlaseIfInputDoesNotContainFive()
+        {
+            var stringInspector = new StringInspector();
+            var expectedValue = false;
+
+            var actualValue = stringInspector.ContainsFive(10);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
