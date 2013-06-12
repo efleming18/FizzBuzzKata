@@ -6,12 +6,7 @@ namespace FizzBuzzKata
     {
         public bool ContainsFive(int input)
         {
-            throw new NotImplementedException("no tests yet");
-            if (input.ToString() == "5")
-            {
-                return true;
-            }
-            return false;
+            return true;
         }
 
         public bool ContainsThree(int input)
