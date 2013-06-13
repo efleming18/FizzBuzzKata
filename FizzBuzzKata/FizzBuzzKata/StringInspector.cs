@@ -15,7 +15,11 @@ namespace FizzBuzzKata
 
         public bool ContainsThree(int input)
         {
-            return true;
+            if (input.ToString().Contains("3"))
+            { 
+                return true; 
+            }
+            return false;
         }
     }
 }
