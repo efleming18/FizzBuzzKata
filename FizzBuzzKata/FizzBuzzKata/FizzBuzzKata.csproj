@@ -57,6 +57,7 @@
     <Compile Include="IStringInspector.cs" />
     <Compile Include="StringInspector.cs" />
     <Compile Include="UnitTests\StringInspectorTests\ContainsFiveShould.cs" />
+    <Compile Include="UnitTests\StringInspectorTests\ContainThreeShould.cs" />
     <Compile Include="UnitTests\WordGetterTests\GetBuzzIfRequiredShould.cs" />
     <Compile Include="UnitTests\WordGetterTests\GetFizzIfRequiredShould.cs" />
     <Compile Include="WordGetter.cs" />
