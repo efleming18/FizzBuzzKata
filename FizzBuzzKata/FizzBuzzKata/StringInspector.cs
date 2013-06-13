@@ -6,7 +6,11 @@ namespace FizzBuzzKata
     {
         public bool ContainsFive(int input)
         {
-            return true;
+            if (input.ToString().Contains("5"))
+            { 
+                return true; 
+            }
+            return false;
         }
 
         public bool ContainsThree(int input)
