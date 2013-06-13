@@ -7,6 +7,11 @@ namespace FizzBuzzKata.UnitTests.StringInspectorTests
     [TestFixture]
     public class ContainThreeShould
     {
+        [SetUp]
+        public void SetUp()
+        {
+            var _stringInspector = new StringInspector();
+
         [Test]
         public void ReturnTrueIfInputContainsThree()
         {           
