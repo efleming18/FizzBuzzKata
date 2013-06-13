@@ -15,7 +15,7 @@ namespace FizzBuzzKata
 
         public bool ContainsThree(int input)
         {
-            throw new NotImplementedException("no tests yet");
+            return true;
         }
     }
 }

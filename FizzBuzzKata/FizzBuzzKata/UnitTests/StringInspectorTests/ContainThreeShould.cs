@@ -9,8 +9,7 @@ namespace FizzBuzzKata.UnitTests.StringInspectorTests
     {
         [Test]
         public void ReturnTrueIfInputContainsThree()
-        {
-            //I'm aware we have 4 broken tests but those will not pass until these tests are done but I like the idea of testing the whole application like that.
+        {           
             var stringInspector = new StringInspector();
             var expectedValue = true;
 
@@ -18,5 +17,6 @@ namespace FizzBuzzKata.UnitTests.StringInspectorTests
 
             Assert.AreEqual(expectedValue, actualValue);
         }
+
     }
 }
