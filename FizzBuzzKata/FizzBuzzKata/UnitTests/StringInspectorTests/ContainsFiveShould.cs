@@ -7,24 +7,30 @@ namespace FizzBuzzKata.UnitTests.StringInspectorTests
     [TestFixture]
     public class ContainsFiveShould
     {
+        private StringInspector _stringInspector;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _stringInspector = new StringInspector();
+        }
+
         [Test]
         public void ReturnTrueIfInputContainsFive()
         {
-            var stringInspector = new StringInspector();
             var expectedValue = true;
 
-            var actualValue = stringInspector.ContainsFive(15);
+            var actualValue = _stringInspector.ContainsFive(15);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
 
         [Test]
-        public void ReturnFlaseIfInputDoesNotContainFive()
+        public void ReturnFalseIfInputDoesNotContainFive()
         {
-            var stringInspector = new StringInspector();
             var expectedValue = false;
 
-            var actualValue = stringInspector.ContainsFive(10);
+            var actualValue = _stringInspector.ContainsFive(10);
 
             Assert.AreEqual(expectedValue, actualValue);
         }
